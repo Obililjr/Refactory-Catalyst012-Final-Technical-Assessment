@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Student Registration</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <form class="form" id="signup" name="registration" action="#" method="post" onsubmit="return validation">
+      <h1>Student Registration </h1>
+      <div class="form-field">
+        <label for="surname">Sur Name:</label>
+        <input type="text" name="surname" placeholder="Enter Surname" autocomplete="off" id="surname" />
+        <small></small>
+      </div>
+
+      <div class="form-field">
+        <label for="givenname">Given Name:</label>
+        <input type="text" name="givenname" placeholder="Enter Given Name" autocomplete="off" id="givenname" />
+        <small></small>
+      </div>
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormSelectTitle">Title</label>
+        <select class="form-select" id="inlineFormSelectTitle">
+          <option selected>Select Title--</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Miss">Miss </option>
+          <option value="Dr">Dr</option>
+          <option value="Prof">Prof</option>
+          <option value="Eng">Eng</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="gender">Gender:</label>
+        <div class="radio">
+          <input type="radio" name="gender" autocomplete="off" id="gender1" value="male" checked />
+          <span>Male</span>
+          <input type="radio" name="gender" autocomplete="off" id="gender2" value="female" />
+          <span>Female</span>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="date">Date Of Birth:</label>
+        <input type="date" name="date" autocomplete="off" id="date"/>
+        <small></small>
+      </div>
+
+      <div class="form-field">
+        <label class="visually-hidden" for="inlineFormSelectTitle">Country</label>
+      <select class="form-select" id="inlineFormSelectCountry">
+        <option selected>--Select Country---</option>
+        <option value="Uga">Uganda</option>
+        <option value="Ken">Kenya</option>
+        <option value="Tan">Tanzania</option>
+        <option value="Rwa">Rwanda</option>
+        <option value="Bur">Burundi</option>
+      </select>
+    </div>
+      <div class="form-field">
+        <label for="Place Of Residence">Place Of Residence :</label>
+        <input type="text" name="placeofresidence" placeholder="Enter Place Of Residence" autocomplete="off" id="Place Of Residence" onblur="checkNin()" />
+        <small></small>
+      </div>
+      <div class="form-field">
+        <label for="Nationality">Nationality:</label>
+        <input type="Nationality" placeholder="Enter Your Nationality " name="Nationality" autocomplete="off" id="Nationality" onblur="checkemail()" />
+        <small></small>
+      </div>
+      <div class="form-field">
+        <input type="submit" class="btn" id="submit" value="Register"
+          onclick="checkUserName(), checkFirstName(), checkTelephone(), checkPassword()" />
+        <small></small>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="/validations.js"></script>
+
+</html>
